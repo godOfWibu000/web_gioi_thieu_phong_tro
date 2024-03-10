@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+	font-family: 'Montserrat', sans-serif;
+	/*	font-family: Arial;*/
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--main-color1: orange;
+	--main-color2: #34495e;
+	--main-color3: #ecf0f1;
+	--hover-transition: 0.5s;
+}
+
+.page {
+	max-width: 1920px;
+	margin: 0 auto;
+	background-color: var(--main-color3);
+}
+
+.content {
+	max-width: 1280px;
+	margin: auto;
+}
+
+/*Header*/
+/*Head*/
+header .head {
+	height: 70px;
+	line-height: 50px;
+}
+
+header .head .item {
+	line-height: 70px;
+}
+
+/*	Menu tai khoan*/
+#menu-toggle{
+	display: none;
+}
+.tuy-chon-tai-khoan {
+	width: 300px;
+	height: 400px;
+	position: fixed;
+	top: 50px;
+	right: 10px;
+	display: none;
+}
+
+.menu-tai-khoan {
+	display: block;
+	padding: 10px 2% 5px 2%;
+	border-bottom: 1px solid grey;
+}
+
+.menu-tai-khoan:hover {
+	background-color: orange;
+	transition: var(--hover-transition);
+}
+
+.menu-tai-khoan:hover a {
+	color: white;
+}
+
+/*	Menu*/
+.menu-item {
+	padding: 10px 30px;
+}
+
+.menu-item:hover {
+	background-color: var(--main-color1);
+	color: white;
+	transition: var(--hover-transition);
+}
+
+/*	Tim kiem*/
+header .tim-kiem input {
+	width: calc(100% - 90px);
+}
+
+/*Side-bar*/
+.right {
+	width: 28%;
+	margin-left: 2%;
+	margin-bottom: 20px;
+}
+
+/*Loc tin dang*/
+#loc-tin-dang {
+	background-color: white;
+}
+
+.khu-vuc {
+	background-color: white;
+}
+
+
+.ds-danh-muc .danh-muc {
+	padding-top: 7px;
+}
+
+.ds-danh-muc .danh-muc:hover {
+	background-color: orange;
+	color: white;
+	transition: var(--hover-transition);
+}
+
+.loc .loc-item {
+	overflow: hidden;
+}
+
+/*Phan trang*/
+.phan-trang button {
+	width: 40px;
+	height: 40px;
+}
+
+.phan-trang button:hover {
+	background-color: var(--main-color3);
+	transition: var(--hover-transition);
+}
+
+/*Footer*/
+footer {
+	clear: both;
+}
+
+/*Dang ky dang nhap*/
+.dang-nhap {
+	width: 50%;
+	height: 100vh;
+	border-radius: 12px;
+	box-shadow: 3px 3px 20px grey;
+	margin: auto;
+	background-color: white;
+	padding: 20px 2%;
+	box-sizing: border-box;
+}
+
+.mat-khau {
+	width: calc(100% - 50px);
+}
+
+#footer {
+    background-image: url("../images/bg-tt.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 20px 0 #c3c3c3;
+    padding: 50px 0 70px 0;
+    text-align: center;
+    background-color: #fff;
+    background-position: 50% 18%;
+    margin-top: 30px;
+}
+
+#footer .combo-logo {
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+#footer .combo-logo img {
+    height: 100%;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+#footer .sub-text {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#footer p {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 768px) {
+	nav{
+		display: none;
+		animation-name: menu;
+		animation-duration: 0.5s;
+	}
+	nav ul{
+		flex-direction: column;
+		background-color: var(--main-color2);
+		width: 150%;
+		height: 100vh;
+		margin-top: 110px;
+		transform: translateX(24%);
+	}
+	#menu-toggle{
+		display: block;
+	}
+	.ds-tin-dang,
+	.right {
+		width: 100%;
+	}
+
+	.dang-nhap {
+		width: 100%;
+	}
+
+	.thumbnail img{
+		width: 100px;
+		height: 100px;
+	}
+}
+
+
+/*Animation*/
+@keyframes menu {
+	from{ transform: translateX(100%); }
+	to{ transform: translateX(0); }
+}

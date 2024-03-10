@@ -1,0 +1,15 @@
+.quan-ly-tai-khoan-left{
+	width: 28%;
+	margin-right: 2%;
+}
+.quan-ly-tai-khoan-right{
+	width: 70%;
+	position: relative;
+}
+
+@media screen and (max-width: 768px){
+	.quan-ly-tai-khoan-left, .quan-ly-tai-khoan-right{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
